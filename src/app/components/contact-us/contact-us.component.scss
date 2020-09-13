@@ -1,0 +1,221 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+@import '../../../scss/keyframes';
+
+
+// .scroll-container{
+//     position: absolute;
+//     top:0;
+//     left:0;
+//     right:0;
+//     bottom:0;
+//     width:100vw;
+//     // transition: all ease 0.3s;
+    
+// }
+// .scroll-content{
+//     height:auto;
+//     // transition: all ease 0.3s;
+// }
+
+
+#contact-container{
+    position: relative;
+    padding-top:150px;
+    // padding-bottom:150px;
+    // background: linear-gradient(180deg, darken($primary-color,20%) 0%, darken($primary-color,0%) 100%);
+    min-height: 100vh;
+    background: transparent;
+    &::before{
+      content: '';
+      position: absolute;
+      width:100%;
+      height:100%;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    //   background-color: $primary-color;
+    //   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+      z-index: -1;
+      /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+    .header-wrapper{
+        h1{
+            color: #fff;
+            font-size: 4.5rem;
+            line-height: 1.2;
+            letter-spacing:0.15rem;
+            font-family: $header-font;
+            color: $secondary-color;
+            font-weight: 500;
+            text-align: center;
+            @include mq(mobile-only){
+                font-size: 3.2rem;
+            }
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+            color: $secondary-color;
+            text-align: center;
+            letter-spacing:0.1rem;
+            margin-top:1rem;
+        }
+    }
+    .map-container{
+        position: relative;
+        width: 100vw;
+        height: 660px;
+        overflow: hidden;
+        margin-top: 2rem;
+        z-index: 1;
+        @include mq(mobile-only){
+            height: 400px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: rgba(darken($primary-color, 20%),1);
+            mix-blend-mode: color;
+        }
+        iframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+
+    
+    .contact-form-wrapper{
+        z-index:-1;
+    }
+
+
+    .contact-info{
+        width:100%;
+        margin-top:4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        @include mq(mobile-only){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            position: relative;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: $secondary-color;
+            text-align: center;
+            // &:after{
+            //     content:'';
+            //     position: absolute;
+            //     top:140%;
+            //     left:50%;
+            //     transform: translate(-50%, 0%);
+            //     width:90%;
+            //     height: 1px;
+            //     background: rgba($primary-color, 0.5);
+            // }
+        }
+        .info-container{
+            margin: 30px 20px;
+            width: 33%;
+            @include mq(mobile-only) {
+                width: 100%;
+            }
+            .sub-title{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                fa-icon{
+                    color: $primary-color;
+                    font-size: 28px;
+                    width: auto;
+                    display: block;
+                    color: $secondary-color;
+                }
+                span.data{
+                    color: $secondary-color;
+                    font-size: 16px;
+                    display: block;
+                    font-weight: 400;
+                    margin-top: 10px;
+                    a{
+                        color: $secondary-color;
+                        text-decoration: none;
+                    }
+                }
+                span.title{
+                    color: $xlight-gray-color;
+                    font-size: 12px;
+                    display: block;
+                    font-weight: 500;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+    }
+    
+    
+}
+
+// .next-container{
+//     position: relative;
+//     width:100%;
+//     margin-top:50px;
+//     padding-top:100px;
+//     padding-bottom:100px;
+//     background: rgba($black-color, 0.1);
+//     border-top: 2px solid $primary-color;
+//     border-bottom: 2px solid $primary-color;
+//     h3{
+//         font-size: 1.4rem;
+//         font-weight: 500;
+//         color: $secondary-color;
+//         text-align: center;
+//         // letter-spacing:0.1rem;
+//         text-transform: uppercase;
+//     }
+//     .next-wrapper{
+//         // margin-top:50px;
+//         z-index: 1;
+//         p{
+//             font-size: 1rem;
+//             color: $secondary-color;
+//             font-weight: 400;
+//             text-align: center;
+//         }
+//         h1{
+//             text-align: center;
+//             a{
+//                 height:200px;
+//                 color: #fff;
+//                 font-size: 4.5rem;
+//                 line-height: 1.2;
+//                 letter-spacing:0.15rem;
+//                 font-family: $header-font;
+//                 color: $secondary-color;
+//                 font-weight: 500;
+//                 text-decoration: none;
+//                 @include mq(mobile-only){
+//                     font-size: 3.2rem;
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,1512 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+@import '../../../../scss/keyframes';
+
+
+// .scroll-container{
+//     position: absolute;
+//     top:0;
+//     left:0;
+//     right:0;
+//     bottom:0;
+//     width:100vw;
+//     // transition: all ease 0.3s;
+    
+// }
+// .scroll-content{
+//     height:auto;
+//     // transition: all ease 0.3s;
+// }
+
+
+#reach-container{
+    position: relative;
+    padding-top:6rem;
+    // padding-bottom:4rem;
+    min-height: 100vh;
+    // background: linear-gradient(180deg, darken($primary-color,20%) 0%, darken($primary-color,0%) 100%);
+    background: transparent;
+    &::before{
+      content: '';
+      position: absolute;
+      width:100%;
+      height:100%;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    //   background-color: $primary-color;
+    //   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+      z-index: -1;
+      /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+    .header-wrapper{
+        width:100%;
+        min-height: 100vh;
+        // background: url(../../../../assets/img/patternTransparent.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        mix-blend-mode: luminosity;
+        @include mq(mobile-only){
+            padding: 150px 20px 50px;
+        }
+        .text-wrapper{
+            .sectionLogoContainer{
+                text-align: center;
+                margin-bottom: 20px;
+                img{
+                    width: 60px;
+                }
+            }
+            h1{
+                color: #fff;
+                font-size: 4rem;
+                line-height: 1.2;
+                letter-spacing:0.15rem;
+                font-family: $header-font;
+                color: $secondary-color;
+                font-weight: 500;
+                text-align: center;
+                @include mq(mobile-only){
+                    font-size: 3.2rem;
+                }
+            }
+            p.sub-header{
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $secondary-color;
+                text-align: center;
+                line-height: 1.6;
+                letter-spacing:0.1rem;
+                margin-top:1rem;
+            }
+            p.text{
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: $secondary-color;
+                text-align: center;
+                letter-spacing:0px;
+                line-height: 1.6;
+                margin-top:1rem;
+                @include mq(mobile-only){
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .icons-Wrapper{
+        // width: 100%;
+        // overflow: hidden;
+        margin-top: 1rem;
+        .swiper-container{
+            padding-bottom: 4rem;
+            .swiper-wrapper{
+                .icon-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 1;
+                    transition: all ease-out 0.8s;
+                    &.swiper-slide-active{
+                        opacity: 1;
+                    }
+                    .img-container{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        border: 2px solid rgba(darken($primary-color, 20%), 0.1);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(darken($primary-color, 20%), 0.1);
+                        margin-bottom: 10px;
+                        transition: all ease-out 0.3s;
+                        img{
+                            height: 50px;
+                            opacity: 0.8;
+                            transition: all ease-out 0.3s;
+                        }
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: $secondary-color;
+                        letter-spacing: 1px;
+                        line-height: 1.6;
+                        text-align: center;
+                        width:140px;
+                        // font-family: $header-font;
+                        // text-transform: uppercase;
+                    }
+                    &:hover {
+                        .img-container{
+                            background-color: rgba(darken($primary-color, 20%), 0.2);
+                            img{
+                                transform: scale(1.1);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-pagination{
+                top: 80%;
+            }
+            .nav-btns-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                button{
+                    width:35px;
+                    border: 2px solid rgba($secondary-color, 0.2);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px;
+                    background: rgba($secondary-color, 0.1);
+                    border-radius: 50%;
+                    fa-icon{
+                        font-size: 20px;
+                        color: $secondary-color;
+                    }
+                }
+                button.prev-btn{
+                    fa-icon{
+
+                    }
+                }
+                button.next-btn{
+                    fa-icon{
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .product-container{
+        position: relative;
+        width:100vw;
+        height:100vh;
+        top:0;
+        left:0;
+        @include mq(desktop-down){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-container{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            padding:20px;
+            overflow: hidden;
+            .bg{
+                position: absolute;
+                width:100%;
+                height:100%;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+            }
+            .particles{
+                position: absolute;
+                width: 50%;
+                height:100vh;
+                top: 50%;
+                transform: translateY(-50%);
+                img{
+                    will-change: transform;
+                    transform-style: preserve-3d;
+                }
+            }
+            @include mq(desktop-down){
+                width:100vw;
+                height:100vh;
+                min-height: 500px;
+                .bg{
+                    height: 100%;
+                }
+            }
+        }
+        .text-container{
+            position: absolute;
+            width: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding:20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .product-logo{
+                width:auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                will-change: transform;
+                transform-style: preserve-3d;
+                img{
+                    width: 100%;
+                    max-width: 120px;
+                }
+            }
+            .hero-text{
+                width: 100%;
+                margin-top: 20px;
+                h2{
+                    color: #fff;
+                    font-size: 3.6rem;
+                    line-height: 1.2;
+                    letter-spacing:0.05rem;
+                    font-family: $header-font;
+                    color: $secondary-color;
+                    font-weight: 400;
+                    text-align: center;
+                    text-shadow: 1px 1px 2px rgba(darken($primary-color, 20%), 1);
+                    will-change: transform;
+                    transform-style: preserve-3d;
+                    @include mq(mobile-only){
+                        font-size: 2.4rem;
+                    }
+                }
+                p{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: $secondary-color;
+                    text-align: center;
+                    letter-spacing:0px;
+                    line-height: 1.8;
+                    margin-top:1rem;
+                    text-shadow: 1px 1px 2px rgba(darken($primary-color, 20%), 1);
+                    will-change: transform;
+                    transform-style: preserve-3d;
+                    @include mq(desktop-down){
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .cta{
+                width:100%;
+                height:auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                will-change: transform;
+                transform-style: preserve-3d;
+                button{
+                    padding:8px 32px;
+                    font-size: 0.9rem;
+                    border-radius: 500px;
+                    font-weight: 400;
+                    letter-spacing: 0.05rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    fa-icon{
+                        font-size: 1.1rem;
+                        margin-left: 10px;
+                    }
+                    @include mq(desktop-down){
+                        font-size: 1.2rem;
+                        fa-icon{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .play-btn-container{
+                display: none;
+                @include mq(desktop-down){
+                    margin-top:1rem;
+                    margin-bottom:2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    color: #fff;
+                    will-change: transform;
+                    transform-style: preserve-3d;
+                    fa-icon{
+                        margin-left: 10px;
+                        font-size: 1.2rem;
+                        color: #fff;
+                    }
+
+                }
+            }
+            @include mq(desktop-down){
+                position: absolute;
+                width:100%;
+                height: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        }
+        &.left-sided{
+            .img-container{
+                .particles{
+                    left:0;
+                    @include mq(desktop-down){
+                        left: 0%;
+                        transform: translate(0%, -50%);
+                    }
+                }
+            }
+            .text-container{
+                right:0;
+            }
+        }
+        &.right-sided{
+            .img-container{
+                .particles{
+                    right:0;
+                    @include mq(desktop-down){
+                        right: 0%;
+                        transform: translate(0%, -50%);
+                    }
+                }
+            }
+            .text-container{
+                left:0;
+            }
+        }
+    }
+
+
+
+    #danone-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/danoneBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .danone-shape-top{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/danoneIllustrationTop.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .danone-shape-left{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width:100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/danoneIllustrationLeft.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    background-position: center;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .danone-shape-right{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width:100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/danoneIllustrationRight.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    background-position: center;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .danone-bottle{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width:100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/danoneDrink.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    background-position: center;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #e4200f;
+                    color: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #heinz-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/heinzBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .heinz-tomato3{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/heinzTomato3.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .heinz-tomato2{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/heinzTomato2.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .heinz-tomato1{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/heinzTomato1.png);
+                    background-repeat: no-repeat;
+                    background-size: 102% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .heinz-tomato{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%, 0%);
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/heinzTomato.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #fff;
+                    color: #e22c29;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #danette-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/danetteBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .danette-pack1{
+                    position: absolute;
+                    top: 0px;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/danettePack1.png);
+                    background-repeat: no-repeat;
+                    background-size: 102% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(0% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 10% center;
+                        // display: none;
+                    }
+                }
+                .danette-pack2{
+                    position: absolute;
+                    top: 0px;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    background: url(../../../../assets/img/reach/danettePack2.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(0% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 10% center;
+                        // display: none;
+                    }
+                }
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #e22c29;
+                    color: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #vitrac-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/vitracBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .vitrac-fruit4{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/vitracStrawberry4.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .vitrac-fruit3{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/vitracStrawberry3.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .vitrac-fruit2{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/vitracStrawberry2.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .vitrac-fruit1{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/vitracStrawberry1.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .vitrac-jar{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/vitracJar.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .vitrac-grass{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/vitracGrass.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #e22c29;
+                    color: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #kitkat-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/kitkatBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .kitkat-choco1{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/kitkatchoco1.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .kitkat-choco2{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/kitkatchoco2.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .kitkat-choco3{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/kitkatchoco3.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .kitkat-choco4{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/kitkatchoco4.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .kitkat-choco5{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/kitkatchoco5.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .kitkat-choco6{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/kitkatchoco6.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #fff;
+                    color: #e5322d;
+                }
+            }
+        }
+        
+
+    }
+
+    
+    #costa-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/costaBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .costa-drink{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/costaDrink.png);
+                    background-repeat: no-repeat;
+                    background-size: 102% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #ffd104;
+                    color: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #hero-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/herojamBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .hero-jar{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/herojamJar.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                .hero-tree{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/herojamTree.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                .hero-fruits{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/herojamFruits.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #00328c;
+                    color: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #maggi-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/maggiBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .maggi-small-pack{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/maggiPackSmall.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .maggi-medium-pack{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/maggiPackMedium.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                .maggi-sandwich{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/maggiSandwich.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                .maggi-big-pack{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/maggiPackBig.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #fdf000;
+                    color: #ed232a;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #clorox-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/cloroxBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .clorox-clothes{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/cloroxClothes.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .clorox-bottle{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/cloroxBottle.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                .clorox-flowers{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/cloroxFlowers.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #fff;
+                    color: #ee2d24;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #niya-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/niyaBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .niya-mobile-app{
+                    position: absolute;
+                    top: 50%;
+                    right: -10%;
+                    width: 25vw;
+                    height: 80vh;
+                    transform: translate(0%, -50%);
+                    background: url(../../../../assets/img/reach/niyaApp.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        display: none;
+                    }
+                }
+                .niya-player-container{
+                    width: 40vw;
+                    max-width: 500px;
+                    min-width: 300px;
+                    height:auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    z-index:-1;
+                    cursor: pointer;
+                    &:hover{
+                        fa-icon{
+                            opacity: 1;
+                            transform: translate(-20%,-50%) scale(1.2);
+                        }
+                    }
+                    img{
+                        width:100%;
+                        height:auto;
+                    }
+                    fa-icon{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-20%,-50%) scale(1);
+                        z-index: 1;
+                        font-size: 54px;
+                        color: #fff;
+                        opacity: 0.8;
+                        transition: all ease-out 300ms;
+                        z-index: 1;
+                        border-radius: 50%;
+                        width: 100px;
+                        height:100px;
+                        cursor: pointer;
+                        // &:hover{
+                        //     opacity: 1;
+                        //     transform: translate(-50%,-50%) scale(1.2);
+                        // }
+                        
+                    }
+                    @include mq(desktop-down){
+                        display: none;
+                    }
+                }
+                #niya-plyr{
+                    width: 40vw;
+                    max-width: 500px;
+                    min-width: 300px;
+                    height:auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    z-index:-1;
+                }                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #2e1368;
+                    color: #ff66b1;
+                }
+            }
+        }
+        
+
+    }
+
+
+    #zeego-product{
+        .img-container{
+            @include mq(desktop-down){
+                opacity: 0.5;
+            }
+            .bg{
+                background:url(../../../../assets/img/reach/zeegoRBG.jpg);
+                background-size: cover;
+            }
+            .particles{
+                .zeego-snacks{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/zeegoRSnacks.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+                .zeego-desk{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/zeegoRDesk.png);
+                    background-repeat: no-repeat;
+                    background-size: 102% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                .zeego-music{
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vh;
+                    transform: translate(-50%, 0%);
+                    background: url(../../../../assets/img/reach/zeegoRMusic.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    @include mq(desktop-down){
+                        top: 50%;
+                        left: 0%;
+                        transform: translate(-50% , -50%);
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: auto 100%;
+                        background-position: 80% center;
+                        // display: none;
+                    }
+                }
+
+                
+            }
+        }
+        .text-container{
+            .cta{
+                button{
+                    background: #0c4da2;
+                    color: #fff;
+                }
+            }
+        }
+        
+
+    }
+
+    
+}
+

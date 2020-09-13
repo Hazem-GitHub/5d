@@ -1,0 +1,188 @@
+<!-- <div class="scroll-container"> -->
+    <main id="home-container">
+        <!-- Slider main container -->
+        <div id="home-swiper" class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="content-container">
+                <div id="welcome-section-content" class="home-section-content">
+                    <div class="text-container">
+                        <h2 class="welcome-sub-header">WELCOME TO THE</h2>
+                        <h1 class="welcome-header">
+                            <span class="text-wrapper">
+                                <span class="line line1"></span>
+                                <span class="letters letters-left">FIFTH</span>
+                                <span class="letters ampersand"></span>
+                                <span class="letters letters-right">DIMENSION</span>
+                                <span class="line line2"></span>
+                            </span>
+                        </h1>
+                        <h3 class="welcome-slogan">ONE STOP SHOP</h3>
+                    </div>
+                </div>
+                <div id="strategy-section-content" class="home-section-content">
+                    <a class="cta" routerLink="/strategy">
+                        <img class="icon" src="assets/img/icons/strategyLogo.svg"/>
+                        <div class="text-container">
+                            <h1 class="section-header">STRATEGY</h1>
+                            <h2 class="section-sub-header">THE NEED TO EVOLVE</h2>
+                            <!-- <button mat-raised-button color="primary" aria-label="Example icon button with a delete icon">
+                                EXPLORE
+                                <fa-icon [icon]="faArrowRight"></fa-icon>
+                            </button> -->
+                        </div>
+                    </a>
+                </div>
+                <div id="creative-section-content" class="home-section-content">
+                    <a class="cta" routerLink="/creative">
+                        <img class="icon" src="assets/img/icons/creativeLogo.svg"/>
+                        <div class="text-container">
+                            <h1 class="section-header">CREATIVE</h1>
+                            <h2 class="section-sub-header">THE POWER TO IMAGINE</h2>
+                        </div>
+                    </a>
+                </div>
+                <div id="production-section-content" class="home-section-content">
+                    <a class="cta" routerLink="/production">
+                        <img class="icon" src="assets/img/icons/productionLogo.svg"/>
+                        <div class="text-container">
+                            <h1 class="section-header">PRODUCTION</h1>
+                            <h2 class="section-sub-header">THE WILL TO ACHIEVE</h2>
+                        </div>
+                    </a>
+                </div>
+                <div id="reach-section-content" class="home-section-content">
+                    <a class="cta" routerLink="/reach">
+                        <img class="icon" src="assets/img/icons/reachLogo.svg"/>
+                        <div class="text-container">
+                            <h1 class="section-header">REACH</h1>
+                            <h2 class="section-sub-header">THE ABILITY TO ATTRACT</h2>
+                        </div>
+                    </a>
+                </div>
+                <div id="innovation-section-content" class="home-section-content">
+                    <a class="cta" routerLink="/innovation">
+                        <img class="icon" src="assets/img/icons/innovationLogo.svg"/>
+                        <div class="text-container">
+                            <h1 class="section-header">INNOVATION</h1>
+                            <h2 class="section-sub-header">THE COURAGE TO EXPLORE</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <section id="welcome-section" class="home-section swiper-slide" data-title="FIFTH DIMENSION" data-subtitle="WELCOME TO THE" data-slogan="ONE STOP SHOP" data-number="01">
+                    <div class="img-mask">
+                        <div class="section-image"></div>
+                    </div>
+                </section>
+                <section id="strategy-section" class="home-section swiper-slide" data-title="STRATEGY" data-subtitle="THE NEED TO EVOLVE" data-number="02">
+                    <div class="img-mask">
+                        <div class="section-image"></div>
+                    </div>
+                    
+                </section>
+                <section id="creative-section" class="home-section swiper-slide" data-title="CREATIVE" data-subtitle="THE POWER TO IMAGINE" data-number="03">
+                    <div class="img-mask">
+                        <div class="section-image"></div>
+                    </div>
+                </section>
+                <section id="production-section" class="home-section swiper-slide" data-title="PRODUCTION" data-subtitle="THE WILL TO ACHIEVE" data-number="04">
+                    <div class="img-mask">
+                        <div class="section-image"></div>
+                    </div>
+                </section>
+                <section id="reach-section" class="home-section swiper-slide" data-title="REACH" data-subtitle="THE ABILITY TO ATTRACT" data-number="05">
+                    <div class="img-mask">
+                        <div class="section-image"></div>
+                    </div>
+                </section>
+                <section id="innovation-section" class="home-section swiper-slide" data-title="INNOVATION"  data-subtitle="THE COURAGE TO EXPLORE" data-number="06">
+                    <div class="img-mask">
+                        <div class="section-image"></div>
+                    </div>               
+                </section>
+                <!-- <section id="innovation-section" class="home-section contact-section swiper-slide" data-title="INNOVATION"  data-subtitle="THE COURAGE TO EXPLORE" data-number="06">
+                    <app-contact-form [formHeader]="contactFormHeader"></app-contact-form>
+                </section> -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+    
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            <div id="home-nav-btns-container" class="nav-btns-container">
+                <button class="prev-btn magic-hover magic-hover__square" type="button">
+                    <fa-icon [icon]="faChevronUp"></fa-icon>
+                </button>
+                <button class="next-btn magic-hover magic-hover__square" type="button">
+                    <fa-icon [icon]="faChevronDown"></fa-icon>
+                </button>
+            </div>
+    
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            <!-- <app-back-to-top></app-back-to-top> -->
+        </div>
+        <div id="clients-swiper" class="clients-swiper-container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/cheetosLogoWhite.png" alt="Cheetos">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/costaLogoWhite.png" alt="Costa coffee">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/danetteLogoWhite.png" alt="Danette">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/danoneLogoWhite.png" alt="Danone">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/hardeesLogoWhite.png" alt="Hardees">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/heinzLogoWhite.png" alt="Heinz">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/kitkatLogoWhite.png" alt="Kitkat">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/lavachequiritLogoWhite.png" alt="La vache qui rit">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/legoLogoWhite.png" alt="Lego">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/nescafeLogoWhite.png" alt="Nescafe">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/smurfsLogoWhite.png" alt="Smurfs">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/vitracLogoWhite.png" alt="Vitrac">
+                </div>
+                <div class="client-slide swiper-slide">
+                    <img src="../../../assets/img/clients/zeegoLogoWhite.png" alt="Zeego">
+                </div>
+            </div>
+        </div>
+        
+
+        <app-contact-form [formHeader]="contactFormHeader"></app-contact-form>
+
+        <!-- <div class="next-container">
+            <div class="next-wrapper">
+                <p>Next</p>
+                <h1>
+                    <a routerLink="/who-we-are" class="magic-hover magic-hover__square">
+                        WHO WE ARE
+                    </a>
+                </h1>
+            </div>
+        </div>   -->
+    </main> 
+<!-- </div> -->
+   
+    

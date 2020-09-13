@@ -1,0 +1,154 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+@import '../../../scss/keyframes';
+
+#contact-form-wrapper{
+    position: relative;
+    width: 70%;
+    width: 100%;
+    min-width: 80vw;
+    padding: 4rem;
+    margin-top: 0rem;
+    background: rgba(darken($primary-color, 20%), 0.2);
+    h1{
+        position: relative;
+        color: #fff;
+        font-size: 4.5rem;
+        line-height: 1.2;
+        letter-spacing:0.15rem;
+        font-family: $header-font;
+        color: $secondary-color;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        @include mq(mobile-only){
+            font-size: 3.2rem;
+        }
+    }
+
+    .contact-form-groups{
+        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        max-width: 900px;
+        justify-content: center;
+        align-items: center;
+        // border: 2px solid rgba(darken($primary-color, 15%), 0.4);
+        border-radius: 20px;
+        // background-color: rgba(darken($primary-color, 15%), 0.4);
+        // margin-top: 30px;
+        // margin-bottom: 30px;
+        @include mq(mobile-only) {
+            width:100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .form-group-wrapper{
+        // width: 90%;
+        margin: 0 10px;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        @include mq(mobile-only){
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    .form-group{
+        width:100%;
+        color: $secondary-color;
+        text-align: center;
+        .mat-form-field-wrapper,
+        .mat-form-field,
+        label,
+        mat-label,
+        input,
+        textarea{
+            color: $secondary-color!important;
+            font-size: 16px;
+            width: 100%;
+            letter-spacing: 0px;
+            padding: 0.55rem;
+            text-align: justify;
+            font-family: $main-font!important;
+            color: #fff!important;
+
+            
+        }
+        .mat-form-field-wrapper,
+        .mat-form-field,
+        label,
+        mat-label{
+            // text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400!important;
+            font-size: 14px;
+            text-align: center;
+            font-family: $main-font!important;
+            color: #fff!important;
+        }
+        textarea{
+            text-align: justify;
+        }
+        .mat-form-field-wrapper{
+            background: rgba($secondary-color, 0.2)!important;
+            font-family: $main-font!important;
+            color: #fff!important;
+        }
+        .mat-form-field-appearance-fill .mat-form-field-underline::before{
+            background-color: rgba($secondary-color, 0.42)!important;
+            color: #fff!important;
+        }
+        .mat-form-field-appearance-legacy{
+            .mat-form-field-underline{
+                background-color: rgba($secondary-color, 0.42)!important;
+                color: #fff!important;
+                .mat-form-field-ripple{
+                    background-color: rgba($secondary-color, 0.42)!important;
+                    color: #fff!important;
+                }
+            }
+        }
+        
+        .mat-input-element{
+            caret-color: #fff;
+        }
+        .mat-form-field-ripple{
+            background-color: rgba($secondary-color, 0.42)!important;
+            color: #fff!important;
+        }
+        .mat-form-field-flex{
+            background-color: rgba($secondary-color,0.3)!important;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba($secondary-color,1)!important;
+            &:hover,&:focus{
+              border-bottom:1px solid rgba($secondary-color,1)!important;
+              &:before{
+                display: none!important;
+              }
+              &:after{
+                display: none!important;
+              }
+            }
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            // background: $primary-color;
+            color: $primary-color!important;
+            font-weight: 600!important;
+            letter-spacing: 2px;
+            font-size: 14px;
+            border-radius: 500px;
+            text-transform: uppercase;
+        }
+    }
+
+}

@@ -1,0 +1,98 @@
+<header>
+    <nav id="main-menu" class="navbar navbar-dark fixed-top">
+        <a class="navbar-brand magic-hover magic-hover__square" routerLink="/home">
+            <img id="logo" src="../../../../assets/img/logos/logo-white.svg" title="Fifth Dimension" />
+        </a>
+        <button class="navbar-toggler magic-hover magic-hover__square" type="button" data-toggle="collapse" data-target="#navigation-container" aria-controls="navigation-container" aria-expanded="false" aria-label="open navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <span id="menu-text"></span>
+            <!-- <fa-icon class="magic-hover magic-hover__square" [icon]="faEllipsisH"></fa-icon> -->
+            <span id="menu-icon" class="">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </span>
+        </button>
+        
+    </nav>
+</header>
+<div class="menu-overlay"></div>
+<div id="navigation-container" class="collapse navbar-collapse d-flex flex-column justify-content-between align-items-start">
+    <button class="navbar-closer" type="button" data-toggle="collapse" data-target="#navigation-container" aria-controls="navigation-container" aria-expanded="true" aria-label="close navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <fa-icon [icon]="faTimes"></fa-icon>
+    </button>
+    <button class="sub-menu-back-btn magic-hover magic-hover__square" type="button">
+        <fa-icon [icon]="faChevronLeft"></fa-icon>
+        BACK
+    </button>
+    <ul id="main-nav" class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/who-we-are" routerLinkActive="active">WHO WE ARE</a>
+        </li>
+        <li class="nav-item has-sub-menu">
+            <a class="nav-link sub-menu-toggler" role="button">
+                SERVICES
+            <fa-icon [icon]="faChevronRight"></fa-icon>
+            </a>
+            <div class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/strategy" routerLinkActive="active">STRATEGY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/creative" routerLinkActive="active">CREATIVE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/production" routerLinkActive="active">PRODUCTION</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/reach" routerLinkActive="active">REACH</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/innovation" routerLinkActive="active">INNOVATION</a>
+            </li>
+            </div>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/our-clients" routerLinkActive="active">OUR CLIENTS</a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">CONTACT US</a>
+        </li>
+    </ul>
+    <div id="social-container" class="d-flex flex-column align-items-start justify-content-center">
+        <h3 class="social-list-title">
+            <span class="title-text">FOLLOW US</span>
+            <span class="title-icon">
+                <fa-icon [icon]="faShareAlt"></fa-icon>
+            </span>
+        </h3>
+        <ul class="social-menu-list nav justify-content-start">
+            <li class="nav-item">
+            <a class="nav-link magic-hover magic-hover__square" href="#">
+                <fa-icon [icon]="faFacebookF"></fa-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link magic-hover magic-hover__square" href="#">
+                <fa-icon [icon]="faInstagram"></fa-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link magic-hover magic-hover__square" href="#">
+                <fa-icon [icon]="faYoutube"></fa-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link magic-hover magic-hover__square" href="#">
+                    <fa-icon [icon]="faLinkedinIn"></fa-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

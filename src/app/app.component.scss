@@ -1,0 +1,46 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+// .scroll-container{
+//     position: absolute;
+//     top:0;
+//     left:0;
+//     right:0;
+//     bottom:0;
+//     width:100vw;
+//     // transition: all ease 0.3s;
+    
+// }
+// .scroll-content{
+//     height:auto;
+//     // transition: all ease 0.3s;
+// }
+
+// .viewport{
+//     overflow: hidden;
+//     position: fixed;
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     // transition: all ease 0.3s;
+// }
+// .scroll-container{
+//     position: absolute;  
+//     overflow: hidden;
+//     z-index: 10;
+//     display: flex;
+//     justify-content: center;  
+//     backface-visibility: hidden;
+//     transform-style: preserve-3d;
+//     width: 100%;
+//     // transition: all ease 0.3s;
+// }
+.viewport{
+    position: relative;
+    width:100%;
+}
+.scroll-container{
+    width:100%;
+}

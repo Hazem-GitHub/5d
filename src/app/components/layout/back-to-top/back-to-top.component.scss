@@ -1,0 +1,95 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.back-to-top-btn{
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border:none;
+    z-index: 1;
+
+    @include mq(mobile-only){
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .btn-icon{
+        width: 35px;
+        height:35px;
+        // background: rgba($secondary-color, 0.1);
+        // border: 2px solid rgba($secondary-color, 0.2);
+        // border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease 300ms;
+        fa-icon{
+            font-size: 24px;
+            color: $secondary-color;
+        }
+    }
+    .btn-text{
+        position: relative;
+        width:100px;
+        height: 40px;
+        margin-left: 10px;
+        overflow: hidden;
+        color: $secondary-color;
+        text-transform: uppercase;
+        &:before{
+            content: 'Back Top';
+            position: absolute;
+            width:100%;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            // font-family: $header-font;
+            text-shadow: 1px 1px 1px rgba(darken($primary-color, 20%), 1);
+            // margin-left: 10px;
+            transition: all ease 300ms;
+            opacity:1;
+        }
+        &:after{
+            content: 'Back Top';
+            position: absolute;
+            width:100%;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, 300%);
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            // font-family: $header-font;
+            text-shadow: 1px 1px 1px rgba(darken($primary-color, 20%), 1);
+            // margin-left: 10px;
+            transition: all ease 300ms;
+            opacity:0;
+        }
+        
+    }
+    &:hover,
+        &:focus{
+            // .btn-icon{
+            //     transform: translateY(-20px);
+            // }
+            .btn-text{
+                &:before{
+                    opacity:0;
+                    transform: translate(-50%, -300%);
+                }
+                &:after{
+                    opacity:1;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        
+            
+        }
+  }

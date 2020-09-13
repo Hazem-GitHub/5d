@@ -1,0 +1,39 @@
+<div id="contact-form-wrapper">
+    <h1>{{ formHeader }}</h1>
+    <form id="contact-form">
+        <div class="contact-form-groups">
+            <div class="form-group-wrapper">
+                <div class="form-group">
+                    <mat-form-field floatLabel="auto" appearance="legacy">
+                        <mat-label>What's Your Name?</mat-label>
+                        <input ngModel #userName="ngModel" name="userName" matInput type="text" required />
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field floatLabel="auto" appearance="legacy">
+                        <mat-label>Email Address</mat-label>
+                        <input ngModel #userEmail="ngModel" name="userEmail" matInput type="email" required />
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field floatLabel="auto" appearance="legacy">
+                        <mat-label>Phone Number</mat-label>
+                        <input ngModel #userPhone="ngModel" name="userPhone" matInput type="text" required />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group-wrapper">
+                <div class="form-group">
+                    <mat-form-field floatLabel="auto" appearance="legacy">
+                        <mat-label>Write Your Message</mat-label>
+                        <textarea ngModel #userMessage="ngModel" name="userMessage" matInput rows="2" required></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div id="submit-btn-container" class="form-group">
+            <button mat-raised-button color="accent" type="submit" class="magic-hover magic-hover__square">SUBMIT <fa-icon [icon]="faPaperPlane"></fa-icon></button>
+        </div>
+        
+    </form>
+</div>

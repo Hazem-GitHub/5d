@@ -1,0 +1,255 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+@import '../../../scss/keyframes';
+
+.scroll-container{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100vw;
+    // transition: all ease 0.3s;
+    
+}
+.scroll-content{
+    height:auto;
+    // transition: all ease 0.3s;
+}
+
+
+#about-container{
+    position: relative;
+    padding-top:150px;
+    // padding-bottom:150px;
+    // background: linear-gradient(180deg, darken($primary-color,20%) 0%, darken($primary-color,0%) 100%);
+    background: transparent;
+    &::before{
+      content: '';
+      position: absolute;
+      width:100%;
+      height:100%;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    //   background-color: $primary-color;
+    //   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+      z-index: -1;
+      /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+    min-height: 100vh;
+    .header-wrapper{
+        h1{
+            color: #fff;
+            font-size: 4.5rem;
+            line-height: 1.2;
+            letter-spacing:0.15rem;
+            font-family: $header-font;
+            color: $secondary-color;
+            font-weight: 500;
+            text-align: center;
+            @include mq(mobile-only){
+                font-size: 3.2rem;
+            }
+        }
+        h2{
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $secondary-color;
+            text-align: center;
+            letter-spacing:0.1rem;
+            margin-top:1rem;
+        }
+    }
+    .objective-wrapper{
+        margin-top: 50px;
+        p{
+            font-size: 1.6rem;
+            color: $secondary-color;
+            text-align: center;
+        }
+    }
+    .clients-wrapper{
+        width:100%;
+        margin-top:100px;
+        .btn-container{
+            button{
+                color: $primary-color;
+                background: $secondary-color;
+                border-radius: 500px;
+                padding: 8px 32px;
+                font-weight: 600;
+                font-size: 14px;
+                font-family: $main-font;
+                fa-icon{
+                    margin-left:10px;
+                }
+            }
+        }
+        h3{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $secondary-color;
+            text-align: center;
+            // letter-spacing:0.1rem;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: $xlight-gray-color;
+            text-align: center;
+            letter-spacing:0.1rem;
+            margin-top:2rem;
+            margin-bottom:2rem;
+            // text-transform: uppercase;
+        }
+        .clients-grid-wrapper{
+            margin: 0;
+            margin-left: 2px;
+            display: block;
+            width:100%;
+            
+            .client-container{
+                display: flex;
+                float: left;
+                width: 25%;
+                height:200px;
+                min-height: 30px;
+                border: 2px solid rgba(darken($primary-color, 40%), 0.2);
+                background: rgba(lighten($primary-color, 20%), 0.2);
+                box-sizing: border-box;
+                text-align: center;
+                margin: 0px;
+                margin-left: 0px;
+                margin-left: -1px;
+                margin-bottom: -1px;
+                @include mq(mobile-only){
+                    width:50%;
+                }
+                img{
+                    margin: 0 auto;
+                    opacity: 0.2;
+                    width:100px;
+                    justify-self:center;
+                    align-self: center;
+                    transition: all 0.2s ease 0s;
+                    -webkit-transition: all 0.2s ease 0s;
+                }
+                &:hover{
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
+            
+        }
+    }
+    .testimonials-container{
+        width:100%;
+        margin-top:100px;
+        h3{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $secondary-color;
+            text-align: center;
+            // letter-spacing:0.1rem;
+            text-transform: uppercase;
+        }
+        #testimonials-swiper{
+            margin-top:50px;
+            .swiper-wrapper{
+                .swiper-slide{
+                    // width:100%!important;
+                    text-align: center;
+                    p{
+                        font-size: 1rem;
+                        color: $secondary-color;
+                        font-weight: 300;
+                    }
+                    .client-review{
+                        font-size: 1rem;
+                        color: $secondary-color;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .swiper-pagination{
+                top: 120%;
+            }
+            .nav-btns-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                button{
+                    width:35px;
+                    border: 2px solid rgba($secondary-color, 0.2);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px;
+                    background: rgba($secondary-color, 0.1);
+                    border-radius: 50%;
+                    fa-icon{
+                        font-size: 20px;
+                        color: $secondary-color;
+                    }
+                }
+                button.prev-btn{
+                    fa-icon{
+
+                    }
+                }
+                button.next-btn{
+                    fa-icon{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+// .next-container{
+//     width:100%;
+//     margin-top:50px;
+//     padding-top:100px;
+//     padding-bottom:100px;
+//     background: rgba($black-color, 0.1);
+//     border-top: 2px solid $primary-color;
+//     border-bottom: 2px solid $primary-color;
+//     h3{
+//         font-size: 1.4rem;
+//         font-weight: 500;
+//         color: $secondary-color;
+//         text-align: center;
+//         // letter-spacing:0.1rem;
+//         text-transform: uppercase;
+//     }
+//     .next-wrapper{
+//         // margin-top:50px;
+//         p{
+//             font-size: 1rem;
+//             color: $secondary-color;
+//             font-weight: 300;
+//             text-align: center;
+//         }
+//         h1{
+//             text-align: center;
+//             a{
+//                 height:200px;
+//                 color: #fff;
+//                 font-size: 4.5rem;
+//                 line-height: 1.2;
+//                 letter-spacing:0.15rem;
+//                 font-family: $header-font;
+//                 color: $secondary-color;
+//                 font-weight: 500;
+//                 text-decoration: none;
+//                 @include mq(mobile-only){
+//                     font-size: 3.2rem;
+//                 }
+//             }
+//         }
+//     }
+// }

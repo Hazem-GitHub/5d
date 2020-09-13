@@ -1,0 +1,148 @@
+<!-- <div class="scroll-container"> -->
+    <main id="creative-container">
+        <div class="service-hero-container">
+            <div class="service-hero-wrapper d-flex flex-column justify-content-between align-items-center">
+                <div class="header-wrapper d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-wrapper container">
+                        <div class="sectionLogoContainer">
+                            <img src="../../../../assets/img/creative/creativeLogo.svg" />
+                        </div>
+                        <h1>CREATIVE</h1>
+                        <p class="sub-header">THE POWER TO IMAGINE</p>
+                        <p class="text">
+                            The success of all projects, comes from knowing where you stand, where your competitors stand and what does you audience want! With our strategy we help you get that CHECKMATE move!
+                        </p>
+                    </div>
+                    <div class="icons-Wrapper container">
+                        <div id="icons-swiper" class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="icon-container swiper-slide">
+                                    <div class="img-container light-up-cursor">
+                                        <img src="../../../../assets/img/creative/creativeServiceIcon1.png"/>
+                                    </div>
+                                    <p>Concepts & Campaigns</p>
+                                </div>
+                                <div class="icon-container swiper-slide">
+                                    <div class="img-container light-up-cursor">
+                                        <img src="../../../../assets/img/creative/creativeServiceIcon2.png"/>
+                                    </div>
+                                    <p>Creative Artwork</p>
+                                </div>
+                                <div class="icon-container swiper-slide">
+                                    <div class="img-container light-up-cursor">
+                                        <img src="../../../../assets/img/creative/creativeServiceIcon3.png"/>
+                                    </div>
+                                    <p>2D & 3D Animation</p>
+                                </div>
+                                <div class="icon-container swiper-slide">
+                                    <div class="img-container light-up-cursor">
+                                        <img src="../../../../assets/img/creative/creativeServiceIcon4.png"/>
+                                    </div>
+                                    <p>Video Storytelling</p>
+                                </div>
+                                <div class="icon-container swiper-slide">
+                                    <div class="img-container light-up-cursor">
+                                        <img src="../../../../assets/img/creative/creativeServiceIcon5.png"/>
+                                    </div>
+                                    <p>User Experience & Interface</p>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+    
+                            <!-- <div id="icons-nav-btns-container" class="nav-btns-container">
+                                <button class="prev-btn magic-hover magic-hover__square" type="button">
+                                    <fa-icon [icon]="faChevronLeft"></fa-icon>
+                                </button>
+                                <button class="next-btn magic-hover magic-hover__square" type="button">
+                                    <fa-icon [icon]="faChevronRight"></fa-icon>
+                                </button>
+                            </div> -->
+    
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- DANGO PRODUCT -->
+    
+        <div id="dango-product" class="product-container right-sided">
+            <div class="img-container">
+                <div class="bg"></div>
+                <div id="dango-particles" class="particles">
+                    <div class="dango-player-container" data-toggle="modal" data-target="#video-modal">
+                        <img src="../../../../assets/img/creative/dangoVideo.jpg" />
+                        <fa-icon [icon]="faPlay"></fa-icon>
+                    </div>
+                    <div class="dango-monkey"></div>
+                </div>
+            </div>
+            <div id="dango-text-container" class="text-container">
+                <div class="product-logo">
+                    <img src="../../../../assets/img/creative/dangoLogo.png" alt="Dango">
+                </div>
+                <div class="hero-text">
+                    <h2>
+                        Interesting Header
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas temporibus voluptas ex quasi, ab placeat assumenda est doloribus neque, facere beatae qui rerum magnam nemo?</p>
+                </div>
+
+                <div class="play-btn-container" data-toggle="modal" data-target="#video-modal">
+                    PLAY VIDEO
+                    <fa-icon [icon]="faPlay"></fa-icon>
+                </div>
+
+                <div class="cta">
+                    <button type="button" mat-flat-button>
+                        EXPLORE
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+
+        
+        <div class="next-container">
+            <div class="next-wrapper">
+                <p>Next</p>
+                <h1>
+                    <a routerLink="/production" class="magic-hover magic-hover__square">
+                        PRODUCTION
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="video-modal"  data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <!-- <h5 class="modal-title" id="videoModalLabel">Modal title</h5> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="plyr__video-embed" id="dango-plyr">
+                        <iframe
+                          src="https://www.youtube.com/embed/KHKf2RZmgsg?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                          allowfullscreen
+                          allowtransparency
+                          allow="autoplay"
+                        ></iframe>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

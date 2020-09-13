@@ -1,0 +1,30 @@
+<div id="social-wrapper" class="d-flex flex-column align-items-end justify-content-end" (mouseenter)="showSocialLinks()" (mouseleave)="hideSocialLinks()">
+    <button type="button" class="social-list-toggler" (click)="toggleSocialLinks($event)">
+        <span class="btn-text">FOLLOW US</span>
+        <span class="btn-icon">
+            <fa-icon [icon]="faShareAlt"></fa-icon>
+        </span>
+    </button>
+    <ul class="social-list nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link magic-hover magic-hover__square" href="#">
+              <fa-icon [icon]="faFacebookF"></fa-icon>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link magic-hover magic-hover__square" href="#">
+              <fa-icon [icon]="faInstagram"></fa-icon>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link magic-hover magic-hover__square" href="#">
+              <fa-icon [icon]="faYoutube"></fa-icon>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link magic-hover magic-hover__square" href="#">
+                <fa-icon [icon]="faLinkedinIn"></fa-icon>
+            </a>
+        </li>
+    </ul>
+</div>

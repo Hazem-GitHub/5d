@@ -1,0 +1,92 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+footer{
+    position: relative;
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(darken($primary-color, 20%), 0.3);
+
+    // padding-top: 4rem;
+    // border-top: 2px solid rgba(darken($primary-color, 15%), 0.4);
+    margin: 0 auto;
+    // .contact-info{
+    //     .title{
+    //         color: $secondary-color;
+    //         font-size: 4rem;
+    //         line-height: 1.2;
+    //         letter-spacing: 0.15rem;
+    //         font-family: $header-font;
+    //         font-weight: 500;
+    //         text-align: center;
+    //         text-shadow: 1px 1px 2px rgba(darken($primary-color, 20%), 1);
+    //     }
+    //     .info-container{
+    //         .sub-title{
+    //             fa-icon{
+    //                 color: $primary-color;
+    //                 font-size: 20px;
+    //                 margin-right: 10px;
+    //                 width: 20px;
+    //             }
+    //             span{
+    //                 color: $secondary-color;
+    //                 font-size: 1rem;
+    //             }
+    //         }
+    //     }
+
+    // }
+    .shortcut-links{
+        width:100%;
+        ul{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            // border-top: 2px solid rgba(darken($primary-color, 15%), 0.5);
+            // border-bottom: 2px solid rgba(darken($primary-color, 15%), 0.5);
+            background: rgba(darken($primary-color, 20%), 0.1);
+            // @include mq(mobile-only){
+            //     flex-direction: column;
+            //     justify-content: center;
+            // }
+            li{
+                margin: 0 10px;
+                @include mq(mobile-only){
+                    margin: 20px 10px;
+                }
+                a{
+                    color: $secondary-color;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    .copyrights{
+        margin-top: 2rem;
+        p{
+            font-size: 12px;
+            color: $secondary-color;
+            font-weight: 500;
+            padding: 1rem;
+            margin-bottom: 20px;
+            text-align: center;
+            @include mq(mobile-only){
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+}

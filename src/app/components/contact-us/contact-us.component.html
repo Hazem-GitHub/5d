@@ -1,0 +1,63 @@
+<!-- <div class="scroll-container"> -->
+    <main id="contact-container">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="header-wrapper">
+                <h1>CONTACT US</h1>
+                <p>KEEP IN TOUCH</p>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.6395956436036!2d31.245398315515033!3d29.961043629461713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847ee8cff2175%3A0x9b3848074b530079!2s5th%20Dimension%20-%205d!5e0!3m2!1sen!2seg!4v1598912938747!5m2!1sen!2seg" width="1920" height="660" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div>
+            <div class="contact-form-wrapper">
+                <app-contact-form [formHeader]="contactFormHeader"></app-contact-form>
+            </div>
+            <div class="contact-info">
+                <!-- <h1>CONTACT INFO</h1> -->
+                <div class="info-container">
+                    <div class="sub-title">
+                        <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                        <span class="title">Phone</span>
+                        <span class="data">
+                            <a href="tel:+20225259910" class="magic-hover magic-hover__square">+2 (02) 2525 9910</a>
+                        </span>
+                        <span class="data">
+                            <a href="tel:+20225256793" class="magic-hover magic-hover__square">+2 (02) 2525 6793</a></span>
+                    </div>
+                </div>
+
+                <div class="info-container">
+                    <div class="sub-title">
+                        <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+                        <span class="title">Address</span>
+                        <span class="data">28 Nile Courniche, Maadi, Cairo, Egypt</span>
+                        <span class="data">Free Zone, Dubai, UAE</span>
+                    </div>
+                </div>
+                
+                <div class="info-container">
+                    <div class="sub-title">
+                        <fa-icon [icon]="faPaperPlane"></fa-icon>
+                        <span class="title">Email</span>
+                        <span class="data">
+                            <a href="mailto:info@5d-agency.com" class="magic-hover magic-hover__square">info@5d-agency.com</a>
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="next-container">
+            <div class="next-wrapper">
+                <p>Next</p>
+                <h1>
+                    <a routerLink="/strategy" class="magic-hover magic-hover__square">
+                        STRATEGY
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </main>
+<!-- </div> -->
