@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FifthDimension</title>
+  <base href="https://hazem-github.github.io/5d.git">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:wght@300,400,500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="./assets/css/magic-mouse.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="styles.74aabe18ff888984b637.css"></head>
+<body class="hide-scrollbar">
+  <app-root></app-root>
+  <script type="text/javascript" src="./assets/js/modernizr-custom.js"></script>
+  <script>
+
+    if (Modernizr.touchevents) {
+      // supported
+      console.log('Touch events enabled');
+    } else {
+      // not-supported
+      console.log('Touch events disabled');
+    }
+    // detect touch support using DOM POINTER EVENTS modernizer module
+    window.addEventListener("pointerdown", detectInputType);
+
+    function detectInputType(event) {
+
+        switch(event.pointerType) {
+            case "mouse":
+                /* mouse input detected */
+                console.log('Mouse click is detected');
+                break;
+            case "pen":
+                /* pen/stylus input detected */
+                console.log('Pen tap is detected');
+                break;
+            case "touch":
+                /* touch input detected */
+                console.log('Touch tap is detected');
+                break;
+            default:
+                /* pointerType is empty (could not be detected)
+                or UA-specific custom type */
+                console.log('Unknown device is detected');
+        }
+    }
+  </script>
+<script src="runtime.e227d1a0e31cbccbf8ec.js" defer></script><script src="polyfills.7a8048a7bdc183c220f1.js" defer></script><script src="scripts.66c0eb23e80968824444.js" defer></script><script src="main.17981f5c60fc42d4087d.js" defer></script></body>
+</html>
